@@ -49,9 +49,9 @@ This should be executed as soon as possible, so UniLWP.Droid introduced a Conten
 > For why ContentProvider is even inited earlier than the `onCreate` call in the Application class, please read a post on [firebase blog](http://firebase.googleblog.com/2016/12/how-does-firebase-initialize-on-android.html).   
 
 Our ContentProvider subclass provides a universal application context that calls Unity at the beginning of the application lifecycle, so any Activity or Service inited after that are free of null reference exceptions.  
-> Each Activity of WallpaperService references a Surface. On Activity, it is a SurfaceView, and on WallpaperService, it is a SurfaceHolder. UniLWP.Droid registers the callback of these surfaces and call `displayChanged` when a new surface is visible. This is how UniLWP.Droid switch the display target dynamically.  
+> Each Activity or WallpaperService references a Surface. On Activity, it is a SurfaceView, and on WallpaperService, it is a SurfaceHolder. UniLWP.Droid registers the callback of these surfaces and call `displayChanged` when a new surface is visible. This is how UniLWP.Droid switch the display target dynamically.  
 
-However, Unity's default activity implementation isn't designed for this. In order to bypass this, UniLWP provides an Activity class that replaces the default Activity in gradle compiling stages. The magic is in the merging process of AndroidManifest.xml files. For more you can read [how to remove activity from manifest](https://developer.android.com/studio/build/manifest-merge).
+However, Unity's default activity implementation isn't designed for such usages. In order to bypass this, UniLWP provides an Activity class that replaces the default Activity in gradle compiling stages. The magic is in the merging process of AndroidManifest.xml files. For more you can read [how to remove activity from manifest](https://developer.android.com/studio/build/manifest-merge).
 
 # Feature Comparsion
 This is the free & open-sourced version of UniLWP.Droid, and certain features are missing in order for you to buy the full version (obviously). For a comparsion between this free version and a [paid version](http://u3d.as/1QVw), see the table below:
