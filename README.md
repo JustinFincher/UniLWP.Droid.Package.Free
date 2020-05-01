@@ -53,4 +53,12 @@ Our ContentProvider subclass provides a universal application context that calls
 However, Unity's default activity implementation isn't designed for this. In order to bypass this, UniLWP provides an Activity class that replaces the default Activity in gradle compiling stages. The magic is in the merging process of AndroidManifest.xml files. For more you can read [how to remove activity from manifest](https://developer.android.com/studio/build/manifest-merge).
 
 # Feature Comparsion
-This is the free & open-sourced version of UniLWP.Droid, and certain features are missing. For a comparsion, see the table below:
+This is the free & open-sourced version of UniLWP.Droid, and certain features are missing. For a comparsion between this free version and a [paid version](http://u3d.as/1QVw), see the table below:
+
+| UniLWP.Droid                          | Free                                                | Paid |
+|---------------------------------------|-----------------------------------------------------|------|
+| Live Wallpaper                        | ✅                                                   | ✅    |
+| One-click deploy                      | ✅                                                   | ✅    |
+| Callbacks (Offset, Lock Event, etc)   | ❌                                                   | ✅    |
+| C# Post-build Scripts For Easy Update | ❌                                                   | ✅    |
+| Modular Customization                 | ✅(only if you read the code and extend it yourself) | ✅    |
