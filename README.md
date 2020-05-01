@@ -34,6 +34,23 @@ For packaging purposes, the plugin is uploaded as an aar file. The java source c
 - Now you have one activity on your launcher, and one service if you open the live wallpaper picker
 
 # How does UniLWP.Droid work?
+This section has a more detailed version on [UniLWP.Droid Documentation](https://docs.google.com/document/d/10b5zDYjr2MDDKUhuUeq192YYoOb5YHcEqfLbr_5m9iM/edit?usp=sharing), check it out if you want to know more.  
+The UnityPlayer java class has a constructor that accepts a Context instance to init the player itself. It also has a method for switching surfaces:
+```java
+class UnityPlayer
+{
+    public UnityPlayer(Context var1) {}
+    public boolean displayChanged(int var1, Surface var2) {}
+}
+```
+As UnityPlayer does not enforce the activity check (it actually did for `runOnUiThread` reasons, but that is another story), we can pass an application context to the parameter and init a UnityPlayer.   
+This should be executed as soon as possible, so UniLWP.Droid introduced a ContentProvider subclass solely for early-init purposes. 
+> For why ContentProvider is even inited earlier than the `onCreate` call in the Application class, please read a post on [firebase blog](http://firebase.googleblog.com/2016/12/how-does-firebase-initialize-on-android.html).   
+
+Our ContentProvider subclass provides a universal application context that calls Unity at the beginning of the application lifecycle, so any Activity or Service inited after that are free of null reference exceptions.  
+> Each Activity of WallpaperService references a Surface. On Activity, it is a SurfaceView, and on WallpaperService, it is a SurfaceHolder. UniLWP.Droid registers the callback of these surfaces and call `displayChanged` when a new surface is visible. This is how UniLWP.Droid switch the display target dynamically.  
+
+However, Unity's default activity implementation isn't designed for this. In order to bypass this, UniLWP provides an Activity class that replaces the default Activity in gradle compiling stages. The magic is in the merging process of AndroidManifest.xml files. For more you can read [how to remove activity from manifest](https://developer.android.com/studio/build/manifest-merge).
 
 # Feature Comparsion
 This is the free & open-sourced version of UniLWP.Droid, and certain features are missing. For a comparsion, see the table below:
