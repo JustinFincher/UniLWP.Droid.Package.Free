@@ -1,0 +1,23 @@
+{
+    "name": "com.justzht.unilwp.droid.free",
+    "displayName": "UniLWP.Droid Free",
+    "version": "0.0.1-preview.1",
+    "unity": "2019.3",
+      "repository": {
+        "type": "git",
+        "url": "git@github.com:JustinFincher/UniLWP.Droid.Package.Free.git"
+      },
+    "description": "A free version of UniLWP.Droid. Works as a drop-in aar that converts your project into live walllpaper through one-click build. Notice this version is only a trial for full version and was shrinked down in terms of features, please check LICENSE for more info. For Java source, please check https://github.com/JustinFincher/UniLWP.Droid.Free.JavaSource",
+    "keywords": [
+        "android",
+        "live wallpaper",
+        "integration"
+    ],
+    "dependencies": {
+    },
+    "author": {
+        "name" : "Haotian Zheng (a.k.a Justin Fincher)",
+        "email" : "justzht+unilwp@gmail.com",
+        "url" : "https://fincher.im"
+    }
+}
