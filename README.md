@@ -1,4 +1,5 @@
 # UniLWP.Droid (Free Version) UPM Package
+[![openupm](https://img.shields.io/npm/v/com.justzht.unilwp.droid.free?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.justzht.unilwp.droid.free/)
 
 ![](Documentation~/unity-banner.jpg)
 
