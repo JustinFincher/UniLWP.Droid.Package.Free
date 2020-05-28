@@ -3,7 +3,7 @@
 
 ![](Documentation~/unity-banner.jpg)
 
-UniLWP.Droid is an Android live wallpaper framework for Unity. With it, you can create Android Studio projects that compile to live wallpaper apps. This is the free version of it (full version on: [Asset Store](http://u3d.as/1QVw)), which only contains necessary code for live wallpaper service itself.  
+UniLWP.Droid is an Android live wallpaper framework for Unity. With it, you can create Android Studio projects that compile to live wallpaper apps. This is the free version of it (full version on: [Asset Store](http://u3d.as/1QVw)), which only contains necessary code for live wallpaper service itself. The demo app for UniLWP.Droid (full version) is also on [Google Play](https://play.google.com/store/apps/details?id=com.justzht.unilwp.droid).  
 For packaging purposes, the plugin is uploaded as an aar file. The java source can be found on the [JavaSource](https://github.com/JustinFincher/UniLWP.Droid.Free.JavaSource) repo.
 
 # Screenshots
@@ -19,7 +19,7 @@ For packaging purposes, the plugin is uploaded as an aar file. The java source c
 
 # Installation Guide
 
-- Add this line to your package.json
+- Add this line to your manifest.json
 ```
 "dependencies": {
     "com.justzht.unilwp.droid.free": "https://github.com/JustinFincher/UniLWP.Droid.Package.Free.git" // this line
