@@ -61,6 +61,7 @@ This is the free & open-sourced version of UniLWP.Droid, and certain features ar
 | Live Wallpaper                        | ✅                                                   | ✅    |
 | One-click deploy                      | ✅                                                   | ✅    |
 | Callbacks (Offset, Lock Event, etc)   | ❌                                                   | ✅    |
+| Touch Events                          | ❌                                                   | ✅    |
 | C# Post-build Scripts For Easy Update | ❌                                                   | ✅    |
 | Modular Customization                 | ✅(only if you read the code and extend it yourself) | ✅    |
 
